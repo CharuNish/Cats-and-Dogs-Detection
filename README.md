@@ -73,19 +73,19 @@ pip install -r requirements.txt
 
 Train YOLOv5 on the dataset:
 ```sh
-python train.py --img 640 --batch 16 --epochs 50 --data dataset.yaml --weights yolov5s.pt
+python train.py --img 640 --batch 16 --epochs 50 --data dataset.yaml --weights yolov5s.pt --patience 5
 ```
 
 ### 🧐 **2. Evaluating the Model**
 
 Use the validation dataset for evaluation:
 ```sh
-python val.py --weights best.pt --data dataset.yaml --task test
+python detect.py --weights runs/train/exp/weights/best.pt --img 640 --conf 0.4
 ```
 
 ## 📌 Kaggle Notebook
 You can find the full implementation in the Kaggle notebook:
-[📌 Rad Cats & Dogs Object Detection](https://www.kaggle.com/code/charukabandara/rad-cats-and-dogs-object-detection)
+[📌 Rad Cats & Dogs Object Detection](https://www.kaggle.com/code/charukabandara/cats-and-dogs-object-detection)
 
 
 
